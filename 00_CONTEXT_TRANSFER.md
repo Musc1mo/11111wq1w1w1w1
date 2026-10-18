@@ -2,12 +2,13 @@
 
 ## 1. Git-репозиторий ✅ ЗАПУШЕН
 - Папка: `/opt/zema_swarm_git/`
-- Remote: `https://github.com/Musc1mo/zema-swarm-core.git` (публичный)
+- Remote (АКТУАЛЬНЫЙ): `git@github.com:Musc1mo/11111wq1w1w1w1.git` (SSH) — основной, deploy key `id_ed25519` имеет WRITE на этот репо
+- Ранее пушили также в `https://github.com/Musc1mo/zema-swarm-core.git` (публичный) — ОТСТАЁТ на 2 коммита (d172b80, e48f769)
 - Ветка: `main`, отслеживает `origin/main`, чисто
-- Коммиты (3): `a81af54` Initial Swarm Architecture v1.0 | `4dae564` Add rule 6 | `8250f2a` Tampermonkey-скрипт + инструкция
-- Пуш подтверждён: server refs/heads/main = 8250f2a9...
-- Файлы в репо: .gitignore, run_bash_tool.py, zema_command_center.py, 07_ENGINEERING_RULES.md, 08_SWARM_ROLES.md, deepseek_to_zema.user.js, DEEPSEEK_TAMPERMONKEY_INSTALL.md
-- АВТОРИЗАЦИЯ: SSH-ключи сервера = read-only deploy keys (НЕ пушат). Рабочий путь: HTTPS + PAT из `/root/.secrets/gh_token.txt` (chmod 600): `git -c credential.helper='!f() { echo username=x-access-token; echo password=$(cat /root/.secrets/gh_token.txt); }; f' push -u origin main`
+- Коммиты (5): a81af54, 4dae564, 8250f2a, d172b80, e48f769 (последний = 00_CONTEXT_TRANSFER.md)
+- Пуш подтверждён: origin/main = e48f769
+- Файлы в репо: .gitignore, run_bash_tool.py, zema_command_center.py, 07_ENGINEERING_RULES.md, 08_SWARM_ROLES.md, deepseek_to_zema.user.js, DEEPSEEK_TAMPERMONKEY_INSTALL.md, 00_CONTEXT_TRANSFER.md
+- АВТОРИЗАЦИЯ: SSH (deploy key, работает для 11111wq1w1w1w1). Для других репо: HTTPS + PAT из `/root/.secrets/gh_token.txt` (chmod 600): `git -c credential.helper='!f() { echo username=x-access-token; echo password=$(cat /root/.secrets/gh_token.txt); }; f' push -u origin main`
 
 ## 2. Тампермонки-скрипт deepseek_to_zema.user.js ⚠️ ЖДЁТ ОБНОВЛЕНИЯ
 - Назначение: DeepSeek → Зёма (Open WebUI http://89.110.97.143:3000)
